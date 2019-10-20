@@ -8,14 +8,18 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
   var alertController: UIAlertController!
-
+  @IBOutlet weak var bookCollection: UICollectionView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      
+      let cellLayout = UICollectionViewFlowLayout()
+      cellLayout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+      
+      bookCollection.collectionViewLayout = cellLayout
     }
   @IBAction func showAlert(_ sender: Any) {
     alert(title: "リスト作成", message: "リスト名を入力してください")
@@ -27,10 +31,21 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookCell", for: indexPath)
-    bookCell.backgroundColor = .red
+    bookCell.layer.borderColor = UIColor.red.cgColor
+    bookCell.layer.borderWidth = 6
+    bookCell.layer.cornerRadius = 6
+    bookCell.layer.masksToBounds = true
     
     return bookCell
   }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let horizontalSpace : CGFloat = 30
+    print(self.view.bounds.width)
+    let cellSize : CGFloat = self.view.bounds.width / 2 - horizontalSpace
+    return CGSize(width: cellSize, height: cellSize)
+  }
+  
   func alert(title:String, message:String) {
     alertController = UIAlertController(title: title,
                                         message: message,
