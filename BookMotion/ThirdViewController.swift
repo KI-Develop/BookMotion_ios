@@ -41,7 +41,6 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let horizontalSpace : CGFloat = 30
-    print(self.view.bounds.width)
     let cellSize : CGFloat = self.view.bounds.width / 2 - horizontalSpace
     return CGSize(width: cellSize, height: cellSize)
   }

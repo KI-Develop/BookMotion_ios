@@ -81,11 +81,91 @@
                         <outlet property="plantBtn" destination="EyT-F2-IAb" id="Ikb-ap-tRU"/>
                         <outlet property="plantHP" destination="1e6-Ps-NjO" id="fhu-5t-v13"/>
                         <outlet property="treeImg" destination="aXp-It-V1S" id="wDi-Yr-KqQ"/>
+                        <segue destination="yLS-4H-aEy" kind="show" identifier="treeModalSegue" id="Onc-oY-2zf"/>
+                        <segue destination="gB2-9a-73L" kind="show" identifier="messageModalSegue" id="l62-wO-FI3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-987.25637181409309"/>
+        </scene>
+        <!--Message Modal View Controller-->
+        <scene sceneID="6n2-LZ-o5m">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="gB2-9a-73L" customClass="MessageModalViewController" customModule="BookMotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="73A-hX-6Ig">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QR-Gt-gGr">
+                                <rect key="frame" x="25" y="188" width="325" height="290"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ああ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-BX-8OH">
+                                        <rect key="frame" x="0.0" y="30" width="325" height="132"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-s4-zMW">
+                                        <rect key="frame" x="110" y="192" width="105" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="せやな">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnAction:" destination="gB2-9a-73L" eventType="touchUpInside" id="Sew-Nd-4Pm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92342572098468056" green="0.95465180837563457" blue="0.76366280391158015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sda-mc-uZ1"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="yvv-s4-zMW" id="KZz-lD-kF0"/>
+                        <outlet property="message" destination="YcU-BX-8OH" id="fD4-Jj-LUT"/>
+                        <outlet property="messageView" destination="5QR-Gt-gGr" id="h1J-qh-hDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckJ-nd-zN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-1662.8185907046477"/>
+        </scene>
+        <!--Tree Modal View Controller-->
+        <scene sceneID="C6M-dy-PNN">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="yLS-4H-aEy" customClass="TreeModalViewController" customModule="BookMotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QMM-FI-zKP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9G-KG-Gik">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBc-DQ-xtY">
+                                        <rect key="frame" x="51" y="51" width="240" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.78541402279999994" green="0.68210495640000002" blue="0.3058706773" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hBH-RX-06x"/>
+                    </view>
+                    <connections>
+                        <outlet property="treeImg" destination="uBc-DQ-xtY" id="eJ1-ZZ-88r"/>
+                        <outlet property="treeView" destination="V9G-KG-Gik" id="oig-5E-0um"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="idR-Sm-53v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-987.25637181409309"/>
         </scene>
         <!--本棚-->
         <scene sceneID="WKf-FI-bJ8">
