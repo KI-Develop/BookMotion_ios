@@ -24,15 +24,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-68-9oV">
-                                <rect key="frame" x="316" y="43" width="11" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyT-F2-IAb">
-                                <rect key="frame" x="115" y="542" width="144" height="43"/>
+                                <rect key="frame" x="115" y="535" width="144" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="育てる">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,27 +65,98 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X56-DY-F6p">
+                                <rect key="frame" x="297" y="532" width="46" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="jyouro"/>
+                                <connections>
+                                    <action selector="waterBtn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="HCq-Ax-tZ5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTe-68-9oV">
+                                <rect key="frame" x="316" y="43" width="48" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32941176470588235" green="0.63529411764705879" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ホーム" image="first" selectedImage="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="jyouro" destination="X56-DY-F6p" id="dgS-NZ-5ul"/>
                         <outlet property="plantBtn" destination="EyT-F2-IAb" id="Ikb-ap-tRU"/>
                         <outlet property="plantHP" destination="1e6-Ps-NjO" id="fhu-5t-v13"/>
                         <outlet property="treeImg" destination="aXp-It-V1S" id="wDi-Yr-KqQ"/>
+                        <outlet property="treePointLabel" destination="LTe-68-9oV" id="2Mc-eH-M6r"/>
                         <segue destination="yLS-4H-aEy" kind="show" identifier="treeModalSegue" id="Onc-oY-2zf"/>
                         <segue destination="gB2-9a-73L" kind="show" identifier="messageModalSegue" id="l62-wO-FI3"/>
+                        <segue destination="Wfp-wU-3SV" kind="show" identifier="waterModalSegue" id="lOf-gK-cXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-987.25637181409309"/>
         </scene>
+        <!--Water Modal View Controller-->
+        <scene sceneID="mWL-er-gcm">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="Wfp-wU-3SV" customClass="WaterModalViewController" customModule="BookMotion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m5H-92-pni">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AdK-pn-dMl">
+                                <rect key="frame" x="16" y="181" width="341" height="305"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAf-X6-xl5">
+                                        <rect key="frame" x="20" y="215" width="100" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="やめる"/>
+                                        <connections>
+                                            <action selector="stop:" destination="Wfp-wU-3SV" eventType="touchUpInside" id="BmR-j2-P3z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcy-NJ-YNz">
+                                        <rect key="frame" x="20" y="64" width="300" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By2-20-2hd">
+                                        <rect key="frame" x="220" y="215" width="100" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="あげる"/>
+                                        <connections>
+                                            <action selector="go:" destination="Wfp-wU-3SV" eventType="touchUpInside" id="Z2X-XM-MNY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9368707248585042" green="1" blue="0.75642704946642547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2vN-L3-iIb"/>
+                    </view>
+                    <connections>
+                        <outlet property="goBtn" destination="By2-20-2hd" id="NfT-be-Mkw"/>
+                        <outlet property="stopBtn" destination="kAf-X6-xl5" id="8Bl-h2-SkN"/>
+                        <outlet property="waterLabel" destination="bcy-NJ-YNz" id="Tlr-Ea-lL9"/>
+                        <outlet property="waterView" destination="AdK-pn-dMl" id="uvl-sf-GU4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80C-ea-tps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512.8" y="-2351.8740629685158"/>
+        </scene>
         <!--Message Modal View Controller-->
         <scene sceneID="6n2-LZ-o5m">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="gB2-9a-73L" customClass="MessageModalViewController" customModule="BookMotion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gB2-9a-73L" customClass="MessageModalViewController" customModule="BookMotion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="73A-hX-6Ig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +165,7 @@
                                 <rect key="frame" x="25" y="188" width="325" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ああ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-BX-8OH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcU-BX-8OH">
                                         <rect key="frame" x="0.0" y="30" width="325" height="132"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -321,6 +385,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="jyouro" width="400" height="350"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

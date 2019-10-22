@@ -6,6 +6,8 @@ class FirstViewController: UIViewController {
   @IBOutlet weak var plantHP: MBCircularProgressBarView!
   @IBOutlet weak var plantBtn: UIButton!
   @IBOutlet weak var treeImg: UIImageView!
+  @IBOutlet weak var jyouro: UIButton!
+  @IBOutlet weak var treePointLabel: UILabel!
   
   
   let images = [UIImage(named:"tree_seichou01")!,
@@ -24,25 +26,47 @@ class FirstViewController: UIViewController {
   
   
   var imageIndex = 0
+  var treePoint = 0
+  var userDafaults = UserDefaults.standard
   var alertController: UIAlertController!
   
   
   override func viewDidLoad() {
     super.viewDidLoad()
 //    animateImageView()
-    
+    print(1)
     treeImg.image = images[0]
     plantHP.value = 0
     plantHP.maxValue = 100
+    
     plantBtn.backgroundColor = UIColor(displayP3Red: 50/255, green: 230/255, blue: 100/255, alpha: 0.8)
     plantBtn.layer.cornerRadius = 10
     plantBtn.layer.masksToBounds = true
+    
+    jyouro.backgroundColor = UIColor(displayP3Red: 0/255, green: 255/255, blue: 255/255, alpha: 0.8)
+    jyouro.layer.cornerRadius = 10
+    jyouro.layer.masksToBounds = true
+    
+    treePoint = 1000
+    userDafaults.register(defaults: ["treePoint": treePoint])
 
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+
+    print(2)
+    treePoint = userDafaults.integer(forKey: "treePoint")
+    print(treePoint)
+    treePointLabel.text = String(treePoint)
   }
 
   @IBAction func plant(_ sender: Any) {
     UIView.animate(withDuration: 1.0) {
       self.plantHP.value += 20.0
+      self.treePoint -= 20
+      self.treePointLabel.text = String(self.treePoint)
+      self.userDafaults.set(self.treePoint, forKey: "treePoint")
     }
     if(self.plantHP.value == 100){
       
@@ -57,6 +81,10 @@ class FirstViewController: UIViewController {
         self.performSegue(withIdentifier: "messageModalSegue", sender: nil)
       }
     }
+  }
+  
+  @IBAction func waterBtn(_ sender: Any) {
+    self.performSegue(withIdentifier: "waterModalSegue", sender: nil)
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

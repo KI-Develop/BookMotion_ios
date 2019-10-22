@@ -16,6 +16,7 @@
 		5B13E73C235C3F8E00460F1D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B13E73B235C3F8E00460F1D /* ThirdViewController.swift */; };
 		5B5CDB0C235DEF7C004537FE /* TreeModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CDB0B235DEF7C004537FE /* TreeModalViewController.swift */; };
 		5B5CDB0E235DF993004537FE /* MessageModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CDB0D235DF993004537FE /* MessageModalViewController.swift */; };
+		5B5CDB10235EA956004537FE /* WaterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5CDB0F235EA956004537FE /* WaterModalViewController.swift */; };
 		758DC91DC4B6E2ED709FB83F /* Pods_BookMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8318073DF2A43611472BE0C /* Pods_BookMotion.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		5B13E73B235C3F8E00460F1D /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5B5CDB0B235DEF7C004537FE /* TreeModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeModalViewController.swift; sourceTree = "<group>"; };
 		5B5CDB0D235DF993004537FE /* MessageModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModalViewController.swift; sourceTree = "<group>"; };
+		5B5CDB0F235EA956004537FE /* WaterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterModalViewController.swift; sourceTree = "<group>"; };
 		8CEB22C091D0895BA423D7DF /* Pods-BookMotion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMotion.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookMotion/Pods-BookMotion.release.xcconfig"; sourceTree = "<group>"; };
 		D8318073DF2A43611472BE0C /* Pods_BookMotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookMotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B90D0B7EBFFC530576A8B1 /* Pods-BookMotion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookMotion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookMotion/Pods-BookMotion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				5B13E73B235C3F8E00460F1D /* ThirdViewController.swift */,
 				5B5CDB0D235DF993004537FE /* MessageModalViewController.swift */,
 				5B5CDB0B235DEF7C004537FE /* TreeModalViewController.swift */,
+				5B5CDB0F235EA956004537FE /* WaterModalViewController.swift */,
 				5B13E7302356CF3E00460F1D /* Assets.xcassets */,
 				5B13E7322356CF3E00460F1D /* LaunchScreen.storyboard */,
 				5B13E7352356CF3E00460F1D /* Info.plist */,
@@ -215,6 +218,7 @@
 				5B5CDB0E235DF993004537FE /* MessageModalViewController.swift in Sources */,
 				5B13E72C2356CF3D00460F1D /* SecondViewController.swift in Sources */,
 				5B5CDB0C235DEF7C004537FE /* TreeModalViewController.swift in Sources */,
+				5B5CDB10235EA956004537FE /* WaterModalViewController.swift in Sources */,
 				5B13E7282356CF3D00460F1D /* AppDelegate.swift in Sources */,
 				5B13E73C235C3F8E00460F1D /* ThirdViewController.swift in Sources */,
 				5B13E72A2356CF3D00460F1D /* FirstViewController.swift in Sources */,
