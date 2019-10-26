@@ -84,7 +84,7 @@
                         <color key="backgroundColor" red="0.32941176470588235" green="0.63529411764705879" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ホーム" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="ホーム" image="first" selectedImage="house" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="jyouro" destination="X56-DY-F6p" id="dgS-NZ-5ul"/>
                         <outlet property="plantBtn" destination="EyT-F2-IAb" id="Ikb-ap-tRU"/>
@@ -299,7 +299,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cs8-pD-LHe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="本棚" image="second" landscapeImage="second" id="lQD-pM-d1u"/>
+                    <tabBarItem key="tabBarItem" title="本棚" image="books" landscapeImage="second" id="lQD-pM-d1u"/>
                     <connections>
                         <outlet property="bookCollection" destination="0Jh-nN-n6X" id="P9k-ew-Mbu"/>
                     </connections>
@@ -327,7 +327,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="saV-xL-kVX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="お知らせ" image="second" id="0lN-JV-kCm"/>
+                    <tabBarItem key="tabBarItem" title="お知らせ" image="info" id="0lN-JV-kCm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhY-Qt-RTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -356,7 +356,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="積み" image="second" selectedImage="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="積み" image="book" selectedImage="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,7 +384,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" width="18" height="18"/>
+        <image name="books" width="18" height="18"/>
         <image name="first" width="30" height="30"/>
+        <image name="house" width="36" height="36"/>
+        <image name="info" width="18" height="18"/>
         <image name="jyouro" width="400" height="350"/>
         <image name="second" width="30" height="30"/>
     </resources>

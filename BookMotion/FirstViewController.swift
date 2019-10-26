@@ -33,8 +33,7 @@ class FirstViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    animateImageView()
-    print(1)
+    
     treeImg.image = images[0]
     plantHP.value = 0
     plantHP.maxValue = 100
@@ -54,10 +53,8 @@ class FirstViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-
-    print(2)
+    
     treePoint = userDafaults.integer(forKey: "treePoint")
-    print(treePoint)
     treePointLabel.text = String(treePoint)
   }
 
